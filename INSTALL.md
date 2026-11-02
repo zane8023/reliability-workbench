@@ -26,6 +26,8 @@ if ($LASTEXITCODE -ne 0) { throw 'dependency check failed' }
 if ($LASTEXITCODE -ne 0) { throw 'synthetic example failed' }
 & '.\.venv\Scripts\python.exe' -B -m examples.synthetic_fixed_reliability
 if ($LASTEXITCODE -ne 0) { throw 'fixed reliability example failed' }
+& '.\.venv\Scripts\python.exe' -B -m examples.synthetic_exponential_fit
+if ($LASTEXITCODE -ne 0) { throw 'exponential fit example failed' }
 & '.\.venv\Scripts\python.exe' -B -m unittest discover -s tests -v
 if ($LASTEXITCODE -ne 0) { throw 'test suite failed' }
 ```
