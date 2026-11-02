@@ -1,0 +1,75 @@
+[
+  {
+    "kind": "arrhenius",
+    "data": {
+      "model_name": "arrhenius",
+      "canonical_parameters": {
+        "activation_energy": 0.6,
+        "test_temperature": 343.15,
+        "use_temperature": 298.15
+      },
+      "canonical_units": {
+        "activation_energy": "eV",
+        "test_temperature": "K",
+        "use_temperature": "K"
+      },
+      "acceleration_factor": 21.380334,
+      "converted_life": null,
+      "formula_validation_status": "synthetic_case_checked",
+      "validation_scope": "Synthetic display fixture: acceleration factor is the previously printed six-decimal value, not full precision.",
+      "warnings": [
+        "Illustrative synthetic parameters; no field validation.",
+        "Converted-life output was not captured in this display snapshot; null means not provided."
+      ]
+    }
+  },
+  {
+    "kind": "fixed_reliability",
+    "data": {
+      "model": "weibull",
+      "parameters": {
+        "scale": 1000.0,
+        "shape": 2.0
+      },
+      "time": 100.0,
+      "time_unit": "hour",
+      "reliability": 0.990049833749168,
+      "failure_probability": 0.00995016625083196,
+      "hazard_rate": 0.0002000000000000002,
+      "hazard_unit": "1/hour",
+      "quantile_probability": 0.1,
+      "quantile_time": 324.592845974501,
+      "validation_status": "synthetic_case_checked",
+      "validation_scope": "Fixed-parameter synthetic checks only; no fitting, calibration or field-risk validation.",
+      "warnings": []
+    }
+  },
+  {
+    "kind": "exponential_fit",
+    "data": {
+      "model": "exponential",
+      "method": "maximum_likelihood_point_estimate",
+      "sample_count": 5,
+      "failure_count": 3,
+      "right_censored_count": 2,
+      "total_exposure": 15.0,
+      "exposure_scale": 5.0,
+      "exposure_scaled_sum": 3.0,
+      "time_unit": "hour",
+      "failure_rate": 0.2,
+      "failure_rate_unit": "1/hour",
+      "scale": 5.0,
+      "validation_status": "synthetic_case_checked",
+      "validation_scope": "Exact failures and right-censored records only; point estimate, not model or field validation.",
+      "assumptions": [
+        "Independent identically distributed exponential lifetimes with constant hazard.",
+        "Independent, non-informative right censoring; one record per unit, no delayed entry."
+      ],
+      "warnings": [
+        "A numerical estimate does not establish the exponential model or independent censoring.",
+        "No confidence interval, uncertainty estimate, or market prediction is provided.",
+        "Fewer than five observed failures: precision may be poor and evidence limited."
+      ]
+    }
+  }
+]
