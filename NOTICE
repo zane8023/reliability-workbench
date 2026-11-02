@@ -1,0 +1,6 @@
+Reliability Workbench
+Project maintainer: zane8023
+
+The project-authorized portions of this candidate are intended to be distributed under the Apache License, Version 2.0; see LICENSE. This notice does not replace the license or assert rights over third-party works.
+
+This source-review archive does not bundle third-party wheels or a virtual environment. Dependencies and their applicable copyright, license and notice terms remain with their respective owners; see THIRD_PARTY_REVIEW.md and the license materials supplied with the actual distributions used.
