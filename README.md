@@ -6,7 +6,7 @@ An engineering workbench for reliability analysis and field failure risk assessm
 
 ## What is available here
 
-This repository currently contains project documentation. **No installable public source release or installation package is available yet.** A small accelerated-life calculation candidate and synthetic example have been prepared locally; independent installation and execution have not been verified. This candidate does not represent the complete workbench.
+This repository currently contains project documentation. **No installable public source release or installation package is available yet.** A small accelerated-life calculation candidate has passed a synthetic example and six focused tests in a fresh Windows/Python 3.10.11 x64 virtual environment, with fixed PyPI wheel hashes checked and dependency consistency verified. Source provenance and license review remain open. This does not validate the complete workbench, all models, or field predictions.
 
 The first public calculation milestone will target a reproducible synthetic case with explicit inputs, units, assumptions, reference results, and limitations. Full analysis workflows, visual reports, AI integration, and field-risk forecasting have not been released or validated as a public version in this repository.
 
