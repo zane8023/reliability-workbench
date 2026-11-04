@@ -8,4 +8,6 @@ On Windows x64/Python 3.10.11, three numerical examples and 46 focused tests pas
 
 The exponential estimate assumes independent identically distributed exponential lifetimes and independent, non-informative censoring. It does not validate these assumptions; few failures can produce imprecise estimates. A synthetic check does not validate the failure mechanism, parameters, product life, field prediction, or fitness for a decision. Domain knowledge, comprehensive illustrated reports, field-risk workflows and AI integration remain future goals, not part of this preview.
 
+This preview also provides [Kaplan–Meier point estimates](examples/KAPLAN_MEIER.md) for exact failures and right-censored observations. It assumes independent non-informative censoring and does not provide confidence intervals or extrapolation. The 53-test suite and synthetic examples passed in an isolated Windows x64/Python 3.10.11 environment using fixed, hash-verified wheels.
+
 The maintainer selected Apache-2.0 for project content they can authorize. Third-party components retain their own terms; see [LICENSE](LICENSE), [NOTICE](NOTICE) and [third-party review](THIRD_PARTY_REVIEW.md).

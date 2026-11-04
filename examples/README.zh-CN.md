@@ -23,3 +23,5 @@
 输出文件名固定为 `reliability-report.html`；已有文件不会覆盖。渲染器本身不做文件读写，示例程序仅读取合成快照并写入明确指定的目标目录。
 
 另附[中文合成静态报告](synthetic-report.zh-CN.html)供查看；已自动检查结构，浏览器视觉检查尚未完成。
+
+完整失效与右删失数据的示例、假设和限制见 [Kaplan–Meier 合成示例](KAPLAN_MEIER.zh-CN.md)。

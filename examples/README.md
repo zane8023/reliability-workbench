@@ -21,3 +21,5 @@ For example, after creating an empty directory `report-output` yourself, run:
 The fixed filename `reliability-report.html` is created exclusively: an existing file is not overwritten. The renderer itself does no file I/O; this example reads the bundled fixture and writes only the explicit destination.
 
 A [static Chinese synthetic report](synthetic-report.zh-CN.html) is included for inspection. Its structure was checked automatically; browser visual inspection remains pending.
+
+See the [Kaplan–Meier synthetic example](KAPLAN_MEIER.md) for exact failures and right-censored observations, assumptions, and limitations.
