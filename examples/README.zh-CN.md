@@ -27,3 +27,5 @@
 完整失效与右删失数据的示例、假设和限制见 [Kaplan–Meier 合成示例](KAPLAN_MEIER.zh-CN.md)。
 
 [可选行业配置示例](DOMAIN_CONFIG.zh-CN.md)仅作格式检查，不验证工程适用性。
+
+实验性[零失效二项上限](ZERO_FAILURE.zh-CN.md)，针对明确试验窗口。

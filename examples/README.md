@@ -25,3 +25,5 @@ A [static Chinese synthetic report](synthetic-report.zh-CN.html) is included for
 See the [Kaplan–Meier synthetic example](KAPLAN_MEIER.md) for exact failures and right-censored observations, assumptions, and limitations.
 
 See the [optional domain configuration example](DOMAIN_CONFIG.md); format checks do not validate engineering suitability.
+
+Experimental [zero-failure binomial bound](ZERO_FAILURE.md), for a defined test window.
