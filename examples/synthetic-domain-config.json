@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1-draft",
+  "mechanism": {
+    "name": "Synthetic mechanism placeholder",
+    "description": "Fictional example; no real mechanism or recommended values."
+  },
+  "model": {
+    "name": "Arrhenius",
+    "scope": "Illustrative schema only; no assumption of model suitability."
+  },
+  "parameters": [
+    {
+      "name": "activation_energy",
+      "value": null,
+      "unit": "eV",
+      "source": null,
+      "valid_range": null,
+      "validation_status": "unverified",
+      "limitations": [
+        "No value or applicability evidence is supplied."
+      ]
+    }
+  ],
+  "references": [],
+  "known_limitations": [
+    "This example does not authorize a calculation or validate a failure mechanism."
+  ]
+}

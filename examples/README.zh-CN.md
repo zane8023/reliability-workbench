@@ -25,3 +25,5 @@
 另附[中文合成静态报告](synthetic-report.zh-CN.html)供查看；已自动检查结构，浏览器视觉检查尚未完成。
 
 完整失效与右删失数据的示例、假设和限制见 [Kaplan–Meier 合成示例](KAPLAN_MEIER.zh-CN.md)。
+
+[可选行业配置示例](DOMAIN_CONFIG.zh-CN.md)仅作格式检查，不验证工程适用性。

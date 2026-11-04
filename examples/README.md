@@ -23,3 +23,5 @@ The fixed filename `reliability-report.html` is created exclusively: an existing
 A [static Chinese synthetic report](synthetic-report.zh-CN.html) is included for inspection. Its structure was checked automatically; browser visual inspection remains pending.
 
 See the [Kaplan–Meier synthetic example](KAPLAN_MEIER.md) for exact failures and right-censored observations, assumptions, and limitations.
+
+See the [optional domain configuration example](DOMAIN_CONFIG.md); format checks do not validate engineering suitability.
