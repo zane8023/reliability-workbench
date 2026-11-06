@@ -22,6 +22,15 @@ The fixed filename `reliability-report.html` is created exclusively: an existing
 
 A [static Chinese synthetic report](synthetic-report.zh-CN.html) is included for inspection. Its structure was checked automatically; browser visual inspection remains pending.
 
+### Saved survival results (optional)
+
+Add `--include-survival` to the command above to append the frozen `saved_survival_results.json` examples. The default three-record report is unchanged. A [Chinese five-record example](synthetic-survival-report.zh-CN.html) includes the two additional result kinds:
+
+- `kaplan_meier` preserves the public estimator's counts, last observation time, failure-time rows and limitations with status `synthetic_case_checked`. Tied failures and censoring remain in their stored rows. An all-censored result has an empty row list; the report does not invent survival estimates, intervals or extrapolation.
+- `zero_failure_binomial` preserves the zero-event count, sample size, one-sided confidence level, upper probability, event definition, observation window, assumptions and limitations. Its status remains `experimental_synthetic_checks_only`. The bound is a probability for the stated test window, not a time rate or field forecast.
+
+The snapshots use the public examples: three failures at 1, 2 and 2 hours with censoring at 2 and 3 hours, and zero failures among 100 synthetic units at confidence 0.95. The renderer does not call either estimator or recompute their answers. It checks display field shapes and basic ranges, not statistical correctness, assumptions, source authenticity or engineering suitability. Unknown top-level data fields are omitted; extra fields inside Kaplan–Meier rows are rejected. Field labels are bilingual; stored values and their original warning/limitation text remain unchanged. No chart or new dependency is introduced. Browser visual review and Windows verification of this extension remain pending.
+
 See the [Kaplan–Meier synthetic example](KAPLAN_MEIER.md) for exact failures and right-censored observations, assumptions, and limitations.
 
 See the [optional domain configuration example](DOMAIN_CONFIG.md); format checks do not validate engineering suitability.

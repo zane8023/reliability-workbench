@@ -1,0 +1,42 @@
+[
+  {
+    "kind": "kaplan_meier",
+    "data": {
+      "model": "Kaplan-Meier",
+      "time_unit": "hour",
+      "sample_count": 5,
+      "failure_count": 3,
+      "right_censored_count": 2,
+      "last_observation_time": 3.0,
+      "rows": [
+        {"time": 1.0, "at_risk": 5, "failures": 1, "censored_at_time": 0, "survival": 0.8},
+        {"time": 2.0, "at_risk": 4, "failures": 2, "censored_at_time": 1, "survival": 0.4}
+      ],
+      "validation_status": "synthetic_case_checked",
+      "limitations": [
+        "Independent non-informative right censoring is assumed.",
+        "Point estimates only; no confidence interval, delayed entry or extrapolation beyond observation."
+      ]
+    }
+  },
+  {
+    "kind": "zero_failure_binomial",
+    "data": {
+      "method": "exact_one_sided_binomial",
+      "failure_count": 0,
+      "sample_size": 100,
+      "confidence_level": 0.95,
+      "failure_probability_upper": 0.029513049607039925,
+      "event_definition": "Synthetic failure",
+      "observation_window": "Synthetic fixed window",
+      "validation_status": "experimental_synthetic_checks_only",
+      "assumptions": [
+        "Independent units with a common event probability and the same defined observation window.",
+        "All tested units have a known binary outcome and zero observed events."
+      ],
+      "limitations": [
+        "Probability for the stated test and window only; not a time rate, field forecast, or guarantee."
+      ]
+    }
+  }
+]
