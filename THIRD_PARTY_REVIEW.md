@@ -13,3 +13,5 @@ The tested Windows/Python 3.10.11 environment uses the following pinned distribu
 | typing-extensions | 4.16.0 | PSF-2.0 | https://pypi.org/project/typing-extensions/4.16.0/ |
 
 No wheels or virtual environment are bundled with this source preview. When downloading or redistributing distributions, review and retain applicable copyright and license texts, including binary notices such as OpenBLAS, LAPACK and GCC where applicable. Consult the license files of actual distributions. The wider original project uses a separate LGPLv3 reliability library; this preview does not directly depend on or distribute it. Source provenance review remains limited.
+
+Nelson–Aalen addition (2026-11-06): this source preview reuses this project's published Kaplan–Meier risk-set rows and the standard grouped `d/n` method. It does not import the separate `reliability` library or include the original full nonparametric service. See the example documentation for the mathematical reference and limitations. The narrow comparison with one installed upstream version does not establish the complete history of all related code; applicable third-party rights remain separate.
