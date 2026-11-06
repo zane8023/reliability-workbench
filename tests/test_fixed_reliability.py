@@ -38,6 +38,39 @@ class FixedReliabilityChecks(unittest.TestCase):
                 self.assertEqual(r.hazard_rate, expected)
                 self.assertEqual(bool(r.warnings), shape < 1)
 
+    def test_rejects_positive_weibull_hazard_underflow(self):
+        # At t == scale, h(t) == shape / scale. These positive values
+        # round to zero in binary64 and must not be reported as zero risk.
+        probability = -math.expm1(-1.0)
+        for shape in (1e-16, 2e-16):
+            with self.subTest(shape=shape), localcontext() as ctx:
+                ctx.prec = 100
+                exact = Decimal.from_float(shape) / Decimal.from_float(1e308)
+                self.assertGreater(exact, Decimal(0))
+                self.assertEqual(float(exact), 0.0)
+                with self.assertRaisesRegex(ValueError, "hazard exceeds floating-point range"):
+                    self.evaluate(params={"scale": 1e308, "shape": shape},
+                                  time=1e308, probability=probability)
+
+    def test_preserves_representable_subnormal_weibull_hazard(self):
+        # Neighboring hazards round to a positive subnormal float and
+        # remain supported, including the smallest positive binary64 value.
+        probability = -math.expm1(-1.0)
+        for shape in (3e-16, 5e-16, 1e-15):
+            with self.subTest(shape=shape), localcontext() as ctx:
+                ctx.prec = 100
+                expected = float(Decimal.from_float(shape) / Decimal.from_float(1e308))
+                result = self.evaluate(params={"scale": 1e308, "shape": shape},
+                                       time=1e308, probability=probability)
+                self.assertGreater(expected, 0.0)
+                self.assertEqual(result.hazard_rate, expected)
+                self.assertEqual(result.warnings, [])
+                json.dumps(result.model_dump(mode="json"), allow_nan=False)
+
+    def test_still_rejects_positive_weibull_hazard_overflow(self):
+        with self.assertRaisesRegex(ValueError, "hazard exceeds floating-point range"):
+            self.evaluate(params={"scale": 1e-308, "shape": 2.0}, time=1e-308)
+
     def test_small_probability_stability(self):
         r = self.evaluate("exponential", {"failure_rate": 1e-20}, 1.0, probability=1e-12)
         self.assertGreater(r.failure_probability, 0)

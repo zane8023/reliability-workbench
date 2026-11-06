@@ -38,6 +38,10 @@ def evaluate_fixed_reliability(request: FixedReliabilityRequest) -> FixedReliabi
                 if log_hazard > math.log(sys.float_info.max):
                     raise ValueError("hazard exceeds floating-point range")
                 hazard = math.exp(log_hazard)
+                # Weibull hazard is strictly positive for positive time.
+                # Preserve subnormal values, but reject underflow to zero.
+                if hazard == 0.0:
+                    raise ValueError("hazard exceeds floating-point range")
             # Keep the complete quantile in log space so an intermediate
             # power cannot underflow before a large scale rescues the result.
             log_quantile = math.log(scale) + math.log(-math.log1p(-p)) / shape
