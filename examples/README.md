@@ -6,6 +6,8 @@ The Arrhenius example and fixed-parameter Weibull example use invented inputs; t
 
 These examples do not fit data, calibrate a mechanism, or validate a market forecast. See the tests and installation instructions for the checked scope.
 
+The request models for these three public calculators reject Python and JSON booleans in calculation parameters, times, probabilities and life-conversion inputs before float conversion. `true` is not a lifetime, shape, temperature or rate of 1. Ordinary integer/float, numeric-string and Decimal coercion is unchanged; existing range checks still apply. Genuine numeric zero remains valid where the model allows it, such as evaluation time zero or zero Celsius. The services recheck constructed or subsequently mutated requests before calculation. This input safeguard does not add models or establish engineering validity; optional governance metadata is unchanged.
+
 The exponential fitting example has three exact failures and two right-censored observations. It estimates a constant rate under IID lifetimes and independent non-informative censoring; it does not verify these assumptions or provide intervals. Even one failure can produce a point estimate, but few failures trigger an uncertainty warning.
 
 ## Offline saved-result report

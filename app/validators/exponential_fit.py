@@ -2,12 +2,13 @@
 import math
 from typing import Dict, List, Literal, Optional
 from pydantic import BaseModel, ConfigDict, Field, model_validator
+from app.validators.numeric_inputs import NonBooleanFloat
 
 
 class ExponentialObservation(BaseModel):
     model_config = ConfigDict(extra="forbid")
     kind: Literal["exact", "right_censored"]
-    time: float = Field(gt=0)
+    time: NonBooleanFloat = Field(gt=0)
 
     @model_validator(mode="after")
     def finite_time(self):

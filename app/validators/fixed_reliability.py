@@ -2,15 +2,16 @@
 import math
 from typing import Dict, Literal, Optional
 from pydantic import BaseModel, ConfigDict, Field, model_validator
+from app.validators.numeric_inputs import NonBooleanFloat
 
 
 class FixedReliabilityRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     model: Literal["weibull", "exponential"]
-    parameters: Dict[str, float]
-    time: float = Field(ge=0)
+    parameters: Dict[str, NonBooleanFloat]
+    time: NonBooleanFloat = Field(ge=0)
     time_unit: Literal["second", "minute", "hour", "day", "year"]
-    quantile_probability: float = Field(default=0.1, gt=0, lt=1)
+    quantile_probability: NonBooleanFloat = Field(default=0.1, gt=0, lt=1)
 
     @model_validator(mode="after")
     def validate_inputs(self):

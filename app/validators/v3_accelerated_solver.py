@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Literal, Optional
 from pydantic import BaseModel, Field, model_validator
 
 from app.validators.parameter_governance import ParameterGovernanceContext
+from app.validators.numeric_inputs import NonBooleanFloat
 
 
 AccelerationModel = Literal[
@@ -43,7 +44,7 @@ TimeUnit = Literal["second", "minute", "hour", "day", "year"]
 
 
 class V3LifeConversionRequest(BaseModel):
-    input_life: float = Field(..., gt=0)
+    input_life: NonBooleanFloat = Field(..., gt=0)
     input_condition: Literal["test", "use"]
     time_unit: TimeUnit
 
@@ -56,7 +57,7 @@ class V3LifeConversionRequest(BaseModel):
 
 class V3AcceleratedLifeEvaluateRequest(BaseModel):
     model_name: AccelerationModel
-    parameters: Dict[str, float]
+    parameters: Dict[str, NonBooleanFloat]
     temperature_unit: Literal["K", "degC"] = "K"
     activation_energy_unit: Literal["eV", "J/mol"] = "eV"
     humidity_unit: Literal["fraction", "percent"] = "fraction"

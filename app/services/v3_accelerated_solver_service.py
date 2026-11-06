@@ -99,6 +99,7 @@ class V3AcceleratedSolverService:
             raise NotImplementedError(
                 "Only forward Arrhenius evaluation is included in this public preview."
             )
+        request = V3AcceleratedLifeEvaluateRequest.model_validate(request.model_dump())
         parameters = self._canonicalize_evaluation(request)
         log_af, steps = self._log_acceleration_factor(
             request.model_name, parameters
