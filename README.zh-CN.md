@@ -16,3 +16,7 @@
 **实验性[零失效单侧二项上限](examples/ZERO_FAILURE.zh-CN.md)** 已提供，结果是试验窗口概率的单侧置信上限，不是时间失效率或市场预测；65 项测试在文档所述 Windows/Python 3.10.11 环境验证。
 
 维护者已选择对有权授权的项目内容采用 Apache-2.0；第三方组件遵守各自许可。参见 [LICENSE](LICENSE)、[NOTICE](NOTICE) 和[第三方说明](THIRD_PARTY_REVIEW.md)。
+
+## 本地 CSV 内存分析候选
+
+此实验性进程内源码预览在已核验的公开基线 c2a0101 上，将合成 CSV 字节接入既有指数点估计和字段白名单 HTML 报告，保留后续输入校验及报告修复，原有两个适配器保持不变。它不提供文件、存储、网络或网页服务。原候选已有 Windows/Python 3.10.11 验证记录，但不能据此认定本次集成修订已通过 Windows 验证；本次集成通过 67 项 Linux 定向检查，但未重新进行完整测试套件、Windows 或视觉验收。它不是完整工作台、可 pip 安装的项目或已验证的市场预测。详见[中文示例与 CSV 合同](examples/LOCAL_CSV_FLOW.zh-CN.md)和[英文示例](examples/LOCAL_CSV_FLOW.md)。

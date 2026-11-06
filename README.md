@@ -15,3 +15,7 @@ An optional [domain configuration format checker](examples/DOMAIN_CONFIG.md) che
 **Experimental [zero-failure one-sided binomial bound](examples/ZERO_FAILURE.md)** is available. It is a one-sided confidence upper bound for test-window probability, not a rate or field forecast. The 65-test suite was checked in the documented Windows/Python 3.10.11 environment.
 
 The maintainer selected Apache-2.0 for project content they can authorize. Third-party components retain their own terms; see [LICENSE](LICENSE), [NOTICE](NOTICE) and [third-party review](THIRD_PARTY_REVIEW.md).
+
+## Local in-memory CSV flow candidate
+
+This experimental in-process source preview connects synthetic CSV bytes to the existing exponential point estimator and selected-field HTML report on reviewed public baseline c2a0101. It preserves the newer input-validation and report fixes, adds no file, storage, network or web service, and retains the original adapters unchanged. The original candidate has historical Windows/Python 3.10.11 validation; that does not constitute Windows validation of this integration revision. The revised integration passed 67 targeted Linux checks; it has not had a new full-suite, Windows or visual validation. This is not a complete workbench, a project-installable package or a validated field forecast. See [the English example and CSV contract](examples/LOCAL_CSV_FLOW.md) and [Chinese example](examples/LOCAL_CSV_FLOW.zh-CN.md).
