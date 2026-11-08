@@ -38,3 +38,8 @@ See the [Kaplan–Meier synthetic example](KAPLAN_MEIER.md) for exact failures a
 See the [optional domain configuration example](DOMAIN_CONFIG.md); format checks do not validate engineering suitability.
 
 Experimental [zero-failure binomial bound](ZERO_FAILURE.md), for a defined test window.
+
+
+## Synthetic point scatter
+
+See [the standalone scatter example and contract](SYNTHETIC_POINT_PLOT.md) for caller-declared synthetic points, display-only scope, validation evidence and limitations. No report or dispatcher integration.

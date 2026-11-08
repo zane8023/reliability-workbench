@@ -28,3 +28,8 @@ Added on 2026-11-06 over reviewed public baseline 8751388, this experimental sou
 ## Experimental in-process dispatcher
 
 Added on 2026-11-06 over reviewed public baseline addfb5a, this experimental source preview connects five existing calculator operations and saved-result HTML rendering through a versioned in-process request/error envelope. It rejects numeric strings, boolean numeric substitutes, unknown nested life-conversion fields and nonfinite JSON exponent overflow. Current Kaplan–Meier and zero-failure saved reports remain supported; Nelson is not a dispatcher/report operation. The public calculators, CSV flow, report implementation and dependencies are unchanged. The integration passed 120 targeted Linux tests and both bilingual examples. This is not an HTTP service, installation package or complete workbench, or a new full-suite, Windows, visual, HTTP-security or VDI acceptance. See the [English contract and synthetic example](examples/API_V1.md) and [Chinese contract](examples/API_V1.zh-CN.md).
+
+
+## Synthetic point scatter source preview
+
+A standalone in-memory SVG display for caller-declared synthetic points is described in [the scatter contract](examples/SYNTHETIC_POINT_PLOT.md). It does not fit or recalculate results and is not wired into reports or the dispatcher. Origin is not independently verified. The contract records validation and visual/layout limits; this source preview is not a tagged release.

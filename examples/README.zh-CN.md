@@ -40,3 +40,8 @@
 [可选行业配置示例](DOMAIN_CONFIG.zh-CN.md)仅作格式检查，不验证工程适用性。
 
 实验性[零失效二项上限](ZERO_FAILURE.zh-CN.md)，针对明确试验窗口。
+
+
+## 合成点散点图
+
+见[独立散点图示例及契约](SYNTHETIC_POINT_PLOT.zh-CN.md)：调用方声明的合成点、仅显示范围、验证证据及限制。未接入报告或 dispatcher。
